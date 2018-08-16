@@ -1,0 +1,1140 @@
+@import url("https://p.typekit.net/p.css?s=1&k=oju0zyj&ht=tk&f=17007.17013.17016&a=2292742&app=typekit&e=css");
+
+@font-face {
+font-family:"adelle-sans";
+src:url("https://use.typekit.net/af/9f2f2a/00000000000000003b9acf30/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/9f2f2a/00000000000000003b9acf30/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/9f2f2a/00000000000000003b9acf30/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"adelle-sans";
+src:url("https://use.typekit.net/af/708bdf/00000000000000003b9acf2e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/708bdf/00000000000000003b9acf2e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/708bdf/00000000000000003b9acf2e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"adelle-sans";
+src:url("https://use.typekit.net/af/03e1a3/00000000000000003b9acf2d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/03e1a3/00000000000000003b9acf2d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/03e1a3/00000000000000003b9acf2d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+ font-family: "Maiola";
+ src: url("../fonts/MaiolaPro-Bold.ttf?v1");
+}
+
+@font-face {
+ font-family: "MaiolaIt";
+ src: url("../fonts/MaiolaPro-Bold-Italic.otf?v1");
+}
+
+@font-face {
+ font-family: "MaiolaRegular";
+ src: url("../fonts/MaiolaPro_Regular.ttf?v1");
+}
+
+$main-blue: #113558;
+$gold: #d4aa7d;
+$white: #f2f2f2;
+
+body {
+	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+	font-size: 22px;
+	font-family: "adelle-sans";
+	font-weight: 400;
+	color: $main-blue;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 0;
+	.logo {
+		width: 72px;
+		height: 72px;
+		background-color: #c4c4c4;
+		border-radius: 50%;
+	}
+	.nav {
+		margin: 0;
+		text-align: right;
+		font-size: 16px;
+		letter-spacing: 1px;
+		li {
+			list-style-type: none;
+			display: inline-block;
+			text-transform: uppercase;
+			margin-left: 49px;
+			a {
+				color: $main-blue;
+				text-decoration: none;
+				position: relative;
+				transition: .3s;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: $main-blue;
+					bottom: -10px;
+					left: calc(50% - 4px);
+					opacity: 0;
+					transition: .3s;
+				}
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+			.active {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Maiola";
+}
+
+.gold {
+	color: $gold;
+}
+
+.vertical-center {
+	align-items: center;
+}
+
+.container {
+	max-width: 1300px;
+	padding: 0 15px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.small-container {
+	max-width: 1060px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.more-link {
+	font-family: "adelle-sans";
+	font-size: 22px;
+	color: $white;
+	line-height: 1.4;
+	padding: 0 10px;
+	text-decoration: none;
+	&:after {
+		content: '';
+		width: 18px;
+		height: 16px;
+		background-image: url('../img/arrow-right.svg?v1');
+		font-family: "Font Awesome 5 Free";
+	    font-weight: bold;
+	    margin-left: 5px;
+	    display: inline-block;
+	    transition: .3s;
+	    background-size: cover;
+	}
+	&:hover {
+		text-decoration: underline;
+		&:after {
+			display: inline-block;
+			margin-left: 13px;
+		}
+	}
+}
+.visit {
+	&:after {
+		transform: rotate(-45deg);
+		position: relative;
+	}
+	&:hover {
+		&:after {
+			transform: rotate(-45deg) translate(8px);
+		}
+	}
+}
+
+.button {
+	font-family: "adelle-sans";
+	font-size: 22px;
+	color: $white;
+	line-height: 1.4;
+	padding: 0 10px;
+	color: $main-blue;
+	text-decoration: none;
+	width: 190px;
+	box-sizing: border-box;
+	border: 2px solid $main-blue;
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	-webkit-box-shadow: 7px 7px 0px 0px $main-blue;
+	-moz-box-shadow: 7px 7px 0px 0px $main-blue;
+	box-shadow: 7px 7px 0px 0px $main-blue;
+	transition: .2s;
+	img {
+		width: 0 !important;
+		transition: .2s;
+	}
+	&:after {
+		content: '';
+	    margin-left: 5px;
+	    display: inline-block;
+	    transform: rotate(-45deg);
+	    position: relative;
+	    transition: .2s;
+	    bottom: 0;
+	    width: 18px;
+		height: 16px;
+		background-image: url('../img/arrow-right.svg?v1');
+		background-size: cover;
+	}
+	&:hover {
+		width: 218px;
+		img {
+			display: inline-block !important;
+			width: 24px !important;
+			padding: 0 3px;
+		}
+		&:after {
+			display: inline-block;
+			transform: rotate(-45deg) translate(8px);
+		}
+	}
+}
+
+.top {
+	background-color: #faf6eb;
+	width: 100%;
+	height: 85vh;
+	.center-data {
+		height: calc(85vh - 200px);
+		display: flex;
+		align-items: center;
+		max-width: 935px;
+		margin: 0 auto;
+		.gold {
+			font-size: 35px;
+			font-family: "adelle-sans";
+		}
+		.info {
+			font-size: 111px;
+			font-family: "Maiola";
+			margin: 0;
+			span {
+				display: block;
+				position: relative;
+				&:before {
+					content: '—';
+					position: relative;
+					color: $gold;
+					margin-right: 30px;
+				}
+			}
+			i {
+				font-family: "MaiolaIt";
+			}
+		}
+	}
+}
+
+.cols-wrapper {
+	display: flex;
+	flex-direction: row;
+	.col-6 {
+		width: 50%;
+		padding: 15px;
+	}
+}
+
+.blue {
+	background-color: $main-blue;
+	color: $white;
+	.about-section {
+		min-height: 600px;
+		font-family: "Maiola";
+		h3 {
+			font-size: 74px;
+			text-align: center;
+		}
+		p {
+			font-size: 35px;
+			font-family: "MaiolaRegular";
+			line-height: 1.52;
+		}
+	}
+	.more-link {
+		&:after {
+			background-image: url('../img/arrow-right-white.svg?v1');
+		}
+	}
+}
+
+.projects {
+	background-color: $white;
+	padding: 100px 0;
+	.cols-wrapper {
+		padding-bottom: 100px;
+		div {
+			&:first-child {
+				padding-right: 30px;
+			}
+		}
+	}
+	.first-wrapper {
+		padding-bottom: 50px;
+	}
+	.data-block {
+		width: 40%;
+		img {
+			display: none;
+		}
+	}
+	.primablock {
+		h4 {
+			margin-top: 50px;
+		}
+	}
+	.advinans {
+		h4 {
+			margin-top: 120px;
+		}
+	}
+	.insurely {
+		h4 {
+			margin-top: 65px;
+		}
+	}
+	.chelsea {
+		h4 {
+			margin-top: 100px;
+		}
+	}
+	.accessor {
+		h4 {
+			margin-top: 60px;
+		}
+	}
+	.img-block {
+		width: 60%;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+	h2 {
+		margin: 0 0 100px;
+		text-align: center;
+		font-size: 74px;
+	}
+	h4 {
+		margin-top: 0;
+		margin-bottom: 24px;
+		font-size: 49px;
+		position: relative;
+		display: inline-block;
+		&:after {
+			content: '—';
+			position: relative;
+			color: $gold;
+			margin-left: 32px;
+		}
+	}
+	img {
+		width: 100%;
+	}
+	.data {
+		padding: 0 50px;
+		.title {
+			font-size: 16px;
+			color: $gold;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 22px;
+			line-height: 1.52;
+			letter-spacing: normal;
+			color: #74777a;
+		}
+		.more-link {
+			color: $main-blue;
+			padding-left: 0;
+		}
+	}
+}
+
+.orange {
+	background-color: #d4aa7d;
+	padding: 100px 0;
+	text-align: center;
+	color: $white;
+	h3 {
+		margin: 0;
+		font-size: 74px;
+	}
+	p {
+		max-width: 432px;
+		font-size: 22px;
+		margin: 0 auto;
+		line-height: 38px;
+	}
+	.owl-carousel {
+		margin-top: 50px;
+		div {
+			position: relative;
+			overflow: visible;
+			img {
+				display: block;
+				position: relative;
+			}
+		}
+	}
+}
+
+.youtube {
+	background-color: #d4aa7d;
+	.container {
+		position: relative;
+	}
+	.youtube-block {
+		background-image: url('../img/giphy.gif?v1');
+		width: 100%;
+		height: 800px;
+		background-size: cover;
+		background-position: center;
+	}
+	.orange-overlay {
+		position: absolute;
+		width: 100%;
+		height: 800px;
+		background: rgba(192, 154, 114, 1);
+		left: 0;
+		mix-blend-mode: color;
+	}
+	img {
+		width: 100%;
+		margin-bottom: -7px;
+	}
+	span {
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+		font-size: 35px;
+		color: $white;
+		font-family: "MaiolaRegular";
+		max-width: 415px;
+		display: block;
+	}
+}
+
+
+footer {
+	background: #113558; /* Old browsers */
+	background: -moz-linear-gradient(left, #113558 0%, #04192d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #113558 0%,#04192d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #113558 0%,#04192d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113558', endColorstr='#04192d',GradientType=1 ); /* IE6-9 */
+	padding: 80px 0 0 0;
+	.title {
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 16px;
+	}
+	.footer-nav {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			font-size: 53px;
+			font-weight: bold;
+			margin-top: 24px;
+			a {
+				color: transparent;
+				text-decoration: none;
+			    -webkit-text-stroke-width: 1px;
+			    position: relative;
+			    -webkit-text-stroke-color: white;
+			    &:before {
+			    	position: absolute;
+				    overflow: hidden;
+				    max-width: 0;
+				    color: #fff;
+				    content: attr(data-hover);
+				    transition: .5s;
+			    }
+			    &:hover {
+			    	-webkit-text-stroke-width: 1px;
+			    	&:before {
+			    		max-width: 100%;
+			    	}
+			    }
+			}
+		}
+	}
+	.sub-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 50px 0 15px 0;
+		.logo {
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background-color: #c4c4c4;
+		}
+		.sub-footer-nav {
+			li {
+				display: inline-block;
+				margin-left: 30px;
+				color: $white;
+				text-decoration: none;
+				font-size: 16px;
+				img {
+					width: 18px;
+					margin-right: 3px;
+					margin-bottom: -2px;
+				}
+			}
+		}
+	}
+}
+
+.about {
+	padding-bottom: 50px;
+	background: #faf6eb;
+	.small-caps {
+		-moz-font-feature-settings: "c2sc", "smcp";
+		-ms-font-feature-settings: "c2sc", "smcp";
+		-webkit-font-feature-settings: "c2sc", "smcp";
+		font-feature-settings: "c2sc", "smcp";
+		letter-spacing: 0.05em;
+		font-size: 31px;
+	}
+	.about-wrapper {
+		padding: 80px 0;
+		.about-top-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			.photo-wrapp {
+				width: 50%;
+				display: flex;
+				justify-content: flex-end;
+			}
+			.info-wrapp {
+				width: 50%;
+			}
+		}
+		.title {
+			display: block;
+			color: $gold;
+			font-size: 35px;
+			line-height: .8;
+		}
+		.name {
+			display: block;
+			font-family: "Maiola";
+			font-size: 111px;
+		}
+		.line {
+			font-family: "Maiola";
+			font-size: 111px;
+			color: $gold;
+		}
+		.text {
+			line-height: 1.52;
+			font-size: 33px;
+			font-family: "MaiolaRegular";
+			margin-top: 70px;
+			margin-bottom: 13px;
+		}
+		.text-small {
+			font-size: 22px;
+			width: 55%;
+			display: inline-block;
+			margin: 0;
+			line-height: 1.52;
+			.paragraph {
+				display: block;
+				margin-top: 17px;
+			}
+			.hover-item {
+				display: inline-block;
+				position: relative;
+				cursor: pointer;
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 2px;
+					background: $main-blue;
+				}
+			}
+			.gq {
+				.hover-images {
+					width: 400px;
+					display: none;
+				}
+			}
+			.mens-health {
+				.hover-images {
+					top: 6px;
+					img {
+						display: inline-block;
+						width: 350px;
+					}
+				}
+			}
+		}
+		.about-nav-container {
+			color: $gold;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 140px;
+			span {
+				text-transform: uppercase;
+				font-size: 16px;
+				letter-spacing: 1px;
+			}
+			.about-navigation {
+				padding: 0;
+				li {
+					list-style-type: none;
+					line-height: 1.52;
+				}
+			}
+		}
+	}
+}
+
+.tooltip_templates {
+	display: none;
+}
+
+.tooltipster-sidetip .tooltipster-box {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	margin: 0 !important;
+	overflow: !important;
+}
+
+.tooltipster-show {
+	height: auto !important;
+	overflow: hidden !important;
+}
+
+.tooltipster-arrow {
+	display: none;
+}
+
+.tooltipster-sidetip .tooltipster-box {
+	overflow: hidden !important;
+}
+
+.tooltipster-sidetip .tooltipster-content {
+	overflow: hidden !important;
+}
+
+.under-about {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#d1d1d1',GradientType=1 );
+	text-align: center;
+	padding-bottom: 60px;
+	padding-top: 60px;
+	background: #faf6eb;
+	position: relative;
+	.half-grey {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #f2f2f2;
+		width: 50%;
+		height: 100%;
+		z-index: 0;
+	}
+	span {
+		color: $gold;
+		font-size: 74px;
+		font-family: "MaiolaIt";
+		position: relative;
+		z-index: 1;
+	}
+}
+
+@media (max-width: 1700px) {
+  .about {
+  	.about-wrapper {
+ 		.text {
+ 			.hover-item {
+ 				.hover-images {
+ 					top:60px;
+ 					left: 0;
+ 					height: -webkit-fill-available;
+ 					align-items: self-end;
+ 					img {
+  						width: 200px;
+  					}
+  				}
+  			}
+  			.gq {
+  				&:hover {
+  					.hover-images {
+  						display: block;
+  						width: auto;
+  						right: -10px;
+  						left: auto;
+  						top: 60px;
+  					}
+  				}
+  				.hover-images {
+
+  				}
+  			}
+  		}
+  	}
+  }
+}
+
+@media (max-width: 1340px) {
+	.youtube span {
+		left: 50px;
+	}
+}
+
+@media (max-width: 1200px) {
+  .projects {
+  	.data-block {
+  		width: 60%;
+  		h4 {
+  			margin-top: 0;
+  		}
+  	}
+  	.img-block {
+  		width: 40%;
+  		display: flex;
+  		align-items: center;
+  	}
+  	.primablock {
+  		padding-bottom: 150px;
+  	}
+  }
+}
+
+
+@media (max-width: 1024px) {
+	.about {
+	  	.about-wrapper {
+	  		.about-top-flex {
+	  			.photo-wrapp {
+	  				img {
+	  					width: 90%;
+	  					height: 90%;
+	  				}
+	  			}
+	  		}
+	  		.text-small {
+	  			width: 50%;
+	  		}
+	  		.about-nav-container {
+	  			margin-left: 50px;
+	  		}
+	  		.small-caps {
+	  			font-size: 22px;
+	  		}
+	 		.text {
+	 			font-size: 24px;
+	 			.hover-item {
+	 				&:hover {
+	 					.hover-images {
+	 						display: block;
+	 					}
+	 				}
+	  			}
+	  			.mens-health {
+	  				.hover-images {
+	  					top: -255px;
+	  					left: -25px;
+	  					img {
+	  						&:first-child {
+								margin-bottom: 40px;
+	  						}
+	  					}
+	  				}
+	  			}
+	  			.gq {
+	  				&:hover {
+	  					.hover-images {
+	  						display: flex;
+	  						width: auto;
+	  						right: -10px;
+	  						left: auto;
+	  					}
+	  				}
+	  			}
+	  		}
+	  	}
+	 }
+	.top {
+		.center-data {
+			padding-left: 32px;
+			.info {
+				font-size: 76px;
+			}
+		}
+	}
+	.about-section {
+		flex-direction: column;
+		.col-6 {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.projects {
+		.cols-wrapper {
+			flex-direction: column;
+		}
+		.data-block {
+			width: 100%;
+			padding-bottom: 50px;
+			padding-right: 0 !important;
+			img {
+				display: inline-block;
+			}
+			h4 {
+				margin-bottom: 10px;
+			}
+			.data {
+				padding: 0;
+				margin-top: -30px;
+			}
+		}
+		.img-block {
+			display: none;
+		}
+	}
+	footer {
+		.title {
+			padding-left: 32px;
+		}
+		.footer-nav {
+			padding-left: 32px;
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	.about {
+	  	.photo-desktop {
+			display: none;
+		}
+		.photo-mobile {
+			display: block;
+			width: 100%;
+		}
+		.about-wrapper {
+			.title {
+				font-size: 21px;
+				margin-bottom: 15px;
+			}
+			.name {
+				font-size: 38px;
+			}
+			.line {
+				font-size: 38px;
+				margin-bottom: 10px;
+			}
+			.text {
+				font-size: 23px;
+			}
+			.small-caps {
+				font-size: 21px;
+			}
+		}
+	}
+	.about .about-wrapper .text .mens-health .hover-images img:first-child {
+		margin-bottom: 22px;
+	}
+	.about .about-wrapper .text .gq:hover .hover-images {
+		top: 35px;
+	}
+	.under-about span {
+		font-size: 25px;
+	}
+	.top {
+		.center-data {
+			.info {
+				font-size: 38px;
+			}
+		}
+	}
+	.container {
+		padding: 0 32px;
+	}
+	.small-container {
+		padding: 0 32px;
+	}
+}
+
+
+@media (max-width: 600px) {
+	header {
+		.nav {
+			font-size: 11px;
+			padding: 0;
+			li {
+				margin-left: 25px;
+			}
+		}
+	}
+	.top {
+		.center-data {
+			padding-left: 0;
+			.gold {
+				font-size: 21px;
+			}
+			.info {
+				span {
+					&:before {
+						margin-right: 3px;
+					}
+				}
+			}
+		}
+	}
+	.button {
+		font-size: 17px;
+		width: 155px;
+		padding: 5px;
+	}
+	.projects {
+		padding: 50px 0;
+		img {
+			width: calc(100% + 32px);
+			position: relative;
+			left: -11px;
+		}
+		h2 {
+			font-size: 32px;
+			margin-bottom: 50px;
+		}
+		h4 {
+			font-size: 25px;
+			margin-bottom: 0;
+			&:after {
+				margin-left: 10px;
+			}
+		}
+		.data-block {
+			padding: 0;
+		}
+		.data {
+			.title {
+				font-size: 11px;
+			}
+			p {
+				font-size: 17px;
+			}
+			.more-link {
+				font-size: 17px;
+				&:after {
+					width: 16px;
+					height: 12px;
+				}
+			}
+		}
+		.cols-wrapper {
+			padding-bottom: 50px;
+		}
+	}
+	.youtube {
+		.container {
+			padding: 0;
+		}
+		.orange-overlay {
+			width: 100%;
+			left: 0;
+		}
+		span {
+			font-size: 21px;
+			left: 20px;
+			right: 20px;
+			bottom: 20px;
+			max-width: 100%;
+		}
+		.youtube-block {
+			height: 300px;
+		}
+		.orange-overlay {
+			height: 300px;
+		}
+	}
+	footer {
+		.title {
+			font-size: 11px;
+			padding-left: 0;
+		}
+		.footer-nav {
+			padding-left: 0;
+			li {
+				font-size: 35px;
+				margin-top: 10px;
+				a {
+					-webkit-text-stroke: 1px $white;
+				}
+			}
+		}
+		.sub-footer {
+			display: block;
+			.logo {
+				display: block;
+			}
+			.sub-footer-nav {
+				padding: 0;
+				text-align: right;
+				li {
+					margin-left: 10px;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+	.orange {
+		padding: 50px 0;
+		h3 {
+			font-size: 32px;
+		}
+		p {
+			font-size: 17px;
+			line-height: 1.6;
+			margin-top: 15px;
+		}
+		.owl-carousel {
+			margin-top: 20px;
+			.owl-item {
+				img {
+				}
+			}
+		}
+		.owl-dots {
+			.owl-dot {
+				display: inline-block;
+				font-size: 22px;
+				margin: 0 10px;
+			}
+			.active {
+				color: $main-blue;
+			}
+		}
+	}
+	.blue {
+		.about-section {
+			min-height: auto;
+			display: block;
+			padding: 70px 15px;
+			.col-6 {
+				padding: 0;
+			}
+			h3 {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 25px;
+				.more-link {
+					display: block;
+					font-size: 17px;
+					margin: 5px 0;
+					&:after {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+	.about .about-wrapper .text .gq:hover .hover-images {
+		left: -85px;
+	}
+	.about .about-wrapper .text .mens-health .hover-images {
+		left: -75px;
+	}
+	.about .about-wrapper .about-top-flex {
+		display: block;
+	}
+	.about .about-wrapper .about-top-flex .info-wrapp {
+		width: 100%;
+	}
+	.about .about-wrapper .about-top-flex .photo-wrapp {
+		width: 100%;
+		display: block;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.about {
+		padding-bottom: 70px;
+	}
+	.about .about-wrapper {
+		.line {
+			display: block;
+		}
+		.text {
+			margin-top: 24px;
+			margin-bottom: 9px;
+		}
+		.text-small {
+			width: 100%;
+			font-size: 17px;
+			.paragraph {
+				margin-top: 13px;
+			}
+		}
+		.about-nav-container {
+			display: block;
+			margin: 24px 0 0 0;
+			width: 100%;
+			span {
+				font-size: 11px;
+			}
+			.about-navigation {
+				margin-top: 8px;
+				li {
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 460px) {
+	.tooltipster-show {
+		width: 104% !important;
+		left: 0 !important;
+	}
+	.hover-images {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 374px) {
+	.top .center-data .info {
+		font-size: 31px;
+	}
+}

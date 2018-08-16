@@ -1,0 +1,19 @@
+{
+  "name": "CustomPeges",
+  "version": "1.0.0",
+  "description": "Custom page",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Volodymyr Mishakin",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.2.1",
+    "require-dir": "^0.3.2"
+  }
+}

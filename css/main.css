@@ -806,6 +806,10 @@ footer {
   .hover-images img {
     width: 100%; }
   .top .center-data .info {
-    font-size: 26px; } 
+    font-size: 30px; } 
 }
 
+@media (max-width: 374px) {
+  .top .center-data .info {
+    font-size: 28px; } 
+}

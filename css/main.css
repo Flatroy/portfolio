@@ -805,8 +805,8 @@ footer {
     left: 0 !important; }
   .hover-images img {
     width: 100%; }
-  .top .center-data .info span {
-    display: inline; } 
+  .top .center-data .info {
+    font-size: 30px; } 
 }
 
 @media (max-width: 374px) {

@@ -6,7 +6,7 @@ $(document).ready(function(){
         center: true,
         stagePadding: 0,
         dotsData: true,
-        margin: -60,
+        margin: -80,
         responsive:{
             600:{
                 items:3,

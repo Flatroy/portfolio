@@ -48,6 +48,10 @@ body {
 	box-sizing: border-box;
 }
 
+br.tablet {
+	display: none;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -134,7 +138,7 @@ h1,h2,h3,h4,h5,h6 {
 	&:after {
 		content: '';
 		width: 18px;
-		height: 16px;
+		height: 14px;
 		background-image: url('../img/arrow-right.svg?v1');
 		font-family: "Font Awesome 5 Free";
 	    font-weight: bold;
@@ -142,6 +146,10 @@ h1,h2,h3,h4,h5,h6 {
 	    display: inline-block;
 	    transition: .3s;
 	    background-size: cover;
+
+		@media (max-width: 600px) {
+			height: 12px;
+		}
 	}
 	&:hover {
 		text-decoration: underline;
@@ -486,10 +494,6 @@ footer {
 		justify-content: space-between;
 		align-items: center;
 		padding: 50px 0 15px 0;
-		.logo {
-			width: 55px;
-			height: 55px;
-		}
 		.sub-footer-nav {
 			li {
 				display: inline-block;
@@ -563,6 +567,14 @@ footer {
 			display: inline-block;
 			margin: 0;
 			line-height: 1.52;
+
+			&.indented {
+
+				@media (min-width: 701px) {
+					margin-left: 7.63vw;
+				}
+			}
+
 			.paragraph {
 				display: block;
 				margin-top: 17px;
@@ -901,12 +913,20 @@ footer {
 			padding-left: 0;
 			.gold {
 				font-size: 21px;
+
+				@media (max-width: 600px) {
+					font-size: 5.6vw;
+				}
 			}
 			.info {
 				span {
 					&:before {
 						margin-right: 3px;
 					}
+				}
+
+				@media (max-width: 600px) {
+					font-size: 10.13333333vw;
 				}
 			}
 		}
@@ -994,7 +1014,7 @@ footer {
 			}
 		}
 		.sub-footer {
-			display: block;
+			display: flex;
 			.logo {
 				display: block;
 			}
@@ -1132,5 +1152,11 @@ footer {
 @media (max-width: 374px) {
 	.top .center-data .info {
 		font-size: 31px;
+	}
+}
+
+@media (max-width: 800px) {
+	br.tablet {
+		display: block;
 	}
 }

@@ -400,6 +400,10 @@ h1,h2,h3,h4,h5,h6 {
 			position: relative;
 			overflow: visible;
 			img {
+				margin: auto;
+				max-width: 303px;
+				border-radius: 55px;
+				box-shadow: 0px 81px 250px rgba(66, 59, 50, 0.6);
 				display: block;
 				position: relative;
 			}
@@ -1042,6 +1046,7 @@ footer {
 			margin-top: 20px;
 			.owl-item {
 				img {
+					max-width: 75vw;
 				}
 			}
 		}

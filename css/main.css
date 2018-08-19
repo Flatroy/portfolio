@@ -310,6 +310,10 @@ h1, h2, h3, h4, h5, h6 {
       position: relative;
       overflow: visible; }
       .orange .owl-carousel div img {
+        margin: auto;
+        max-width: 303px;
+        border-radius: 55px;
+        box-shadow: 0px 81px 250px rgba(66, 59, 50, 0.6);
         display: block;
         position: relative; }
 
@@ -367,7 +371,7 @@ footer {
       list-style-type: none;
       font-size: 53px;
       font-weight: bold;
-      margin-top: 0px; }
+      margin-top: 24px; }
       footer .footer-nav li a {
         color: transparent;
         text-decoration: none;
@@ -748,6 +752,8 @@ footer {
       margin-top: 15px; }
     .orange .owl-carousel {
       margin-top: 20px; }
+      .orange .owl-carousel .owl-item img {
+        max-width: 75vw; }
     .orange .owl-dots .owl-dot {
       display: inline-block;
       font-size: 22px;

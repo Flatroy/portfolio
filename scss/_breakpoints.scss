@@ -1,0 +1,22 @@
+
+// break points
+$xl: map-get($grid-breakpoints,xl);
+$lg: $xl - 1;
+$mdUp: map-get($grid-breakpoints,lg);
+$md: $mdUp - 1;
+$smUp: map-get($grid-breakpoints,md);
+$sm: $smUp - 1;
+$xsUp: map-get($grid-breakpoints,sm);
+$xs: $xsUp - 1;
+$xxsUp: 480px;
+$xxs: $xxsUp - 1;
+@mixin xl{@media(min-width:#{$xl}){@content;}}
+@mixin lg{@media(max-width:#{$lg}){@content;}}
+@mixin md{@media(max-width:#{$md}){@content;}}
+@mixin mdUp{@media(min-width:#{$mdUp}){@content;}}
+@mixin sm{@media(max-width:#{$sm}){@content;}}
+@mixin smUp{@media(min-width:#{$smUp}){@content;}}
+@mixin xs{@media(max-width:#{$xs}){@content;}}
+@mixin xsUp{@media(min-width:#{$xsUp}){@content;}}
+@mixin xxs{@media(max-width:#{$xxs}){@content;}}
+@mixin xxsUp{@media(min-width:#{$xxsUp}){@content;}}

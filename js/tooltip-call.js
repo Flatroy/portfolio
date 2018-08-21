@@ -14,7 +14,8 @@ $(document).ready(function () {
     triggerClose: {
       click: true,
       scroll: true,
-      tap: true
+      tap: true,
+      mouseleave: true
     }
   });
 });

@@ -1,3 +1,7 @@
+@import "parts/owl.carousel.min";
+@import "parts/owl.theme.default.min";
+@import "parts/tooltipster.bundle.min";
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -508,16 +512,62 @@ h1, h2, h3, h4, h5, h6 {
 .youtube {
   background-color: #d4aa7d;
   position: relative;
+  overflow: hidden;
+
   .container {
     position: relative;
   }
   .youtube-block {
-    background-image: url('../img/giphy.gif?v1');
     width: 100%;
     height: 800px;
-    background-size: cover;
-    background-position: center;
+    position: static;
+    z-index: 0;
+    display: block;
+    left: 0;
+    top: 0;
+    $width: 150%;
+
+    .bgvideo-holder {
+      width: 100%;
+      height:100%;
+      overflow:hidden;
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        //z-index: -1000;
+        overflow: hidden;
+      }
+    }
+
+    video2 {
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //height: 100%;
+      //width: $width;
+      //margin-left: -($width - 100%)/2;
+      min-width: 100%;
+      min-height: 100%;
+
+      /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+      width: auto;
+      height: auto;
+
+      /* Center the video */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
   }
+
   .orange-overlay {
     position: absolute;
     width: 100%;
@@ -525,6 +575,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(192, 154, 114, 1);
     left: 0;
     mix-blend-mode: color;
+    z-index: 10;
   }
   img {
     width: 100%;

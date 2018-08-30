@@ -513,6 +513,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #d4aa7d;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   .container {
     position: relative;
@@ -541,31 +542,11 @@ h1, h2, h3, h4, h5, h6 {
         min-height: 100%;
         width: auto;
         height: auto;
-        //z-index: -1000;
+        z-index: -2;
         overflow: hidden;
       }
     }
 
-    video2 {
-      //position: absolute;
-      //top: 0;
-      //left: 0;
-      //height: 100%;
-      //width: $width;
-      //margin-left: -($width - 100%)/2;
-      min-width: 100%;
-      min-height: 100%;
-
-      /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-      width: auto;
-      height: auto;
-
-      /* Center the video */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
   }
 
   .orange-overlay {
@@ -575,7 +556,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(192, 154, 114, 1);
     left: 0;
     mix-blend-mode: color;
-    z-index: 10;
+    z-index: -1;
   }
   img {
     width: 100%;
@@ -827,6 +808,7 @@ footer {
       display: inline-block;
       vertical-align: top;
       margin-left: 140px;
+      margin-top: -2px;
       span {
         text-transform: uppercase;
         font-size: 16px;
@@ -834,6 +816,7 @@ footer {
       }
       .about-navigation {
         padding: 0;
+        margin-top: 10px;
         li {
           list-style-type: none;
           line-height: 1.52;

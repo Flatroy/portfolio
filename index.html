@@ -200,20 +200,26 @@
   </div>
 </section>
 
+
 <section class="youtube">
 
-  <div class="orange-overlay"></div>
   <div class="yt-panel"></div>
   <div class="youtube-block">
     <div class="bgvideo-holder">
+      <div class="bgvideo-overlay"></div>
       <video id="bgvideo"
              preload="auto"
              autoplay
              loop
+             playsinline
              muted="muted">
         <source id="mp4" src="img/gipfy-mp4.mp4" type="video/mp4">
         <source src="img/gipfy-webm.webm" type="video/webm">
       </video>
+      <script>
+        // var video = document.getElementById('bgvideo');
+        // video.addEventListener("canplay", video.play());
+      </script>
     </div>
   </div>
   <div class="yt-text-holder">
